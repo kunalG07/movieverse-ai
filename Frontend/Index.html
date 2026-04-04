@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse AI - Predict Your Movie's Success</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">MovieVerse AI</div>
+        <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#predict">Predict</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="animate-fadeInUp">Predict Movie Success</h1>
+        <p class="animate-fadeInUp">Harness the power of AI to analyze movies before they hit theaters.</p>
+        <button class="cta-button glow-btn animate-fadeInUp" onclick="scrollToPredict()">
+            <i class="fas fa-rocket"></i> Try MovieVerse Now
+        </button>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="section reveal">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+        <div class="feature-card glass">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI Prediction</h3>
+            <p>Smart prediction using trained ML model</p>
+        </div>
+
+        <div class="feature-card glass">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Confidence Score</h3>
+            <p>Get accuracy percentage with prediction</p>
+        </div>
+
+        <div class="feature-card glass">
+            <div class="feature-icon"><i class="fas fa-database"></i></div>
+            <h3>Data Driven</h3>
+            <p>Based on historical movie performance</p>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="how" class="section reveal">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+        <div class="step glass">
+            <div class="step-number">1</div>
+            <p>Enter movie details like director, actors, genre</p>
+        </div>
+
+        <div class="step glass">
+            <div class="step-number">2</div>
+            <p>AI processes data using trained model</p>
+        </div>
+
+        <div class="step glass">
+            <div class="step-number">3</div>
+            <p>Get prediction with confidence score</p>
+        </div>
+    </div>
+</section>
+
+<!-- Prediction Form -->
+<section id="predict" class="section reveal">
+    <h2 class="section-title">Predict Now</h2>
+    <div class="input-form glass">
+        <div class="form-group">
+            <label>Director</label>
+            <input id="director" type="text" placeholder="Enter Director Name">
+        </div>
+
+        <div class="form-group">
+            <label>Actors</label>
+            <input id="actors" type="text" placeholder="Enter Actors (comma separated)">
+        </div>
+
+        <div class="form-group">
+            <label>Genre</label>
+            <input id="genre" type="text" placeholder="Enter Genre">
+
+        </div>
+
+        <div class="form-group">
+            <label>Budget</label>
+            <input id="budget" type="number" placeholder="Enter Budget">
+        </div>
+
+        <div class="btn-center">
+        <button class="cta-button glow-btn" onclick="predictMovie()">
+            Predict Movie
+        </button>
+        </div>
+    </div>
+</section>
+
+<!-- Result -->
+<section class="result-section">
+    <div class="result-container">
+
+        <!-- Loading -->
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Analyzing Movie...</p>
+        </div>
+
+        <!-- Result Output -->
+        <div class="result">
+            <h1 class="result-title result-hit">HIT</h1>
+
+            <div class="confidence-meter">
+                <div class="meter-bg">
+                    <div class="meter-fill">85%</div>
+                </div>
+            </div>
+
+            <p class="confidence-text">Confidence Score</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section reveal">
+    <h2 class="section-title">About</h2>
+    <div class="about-content">
+        <div class="about-text">
+            MovieVerse AI predicts movie success using machine learning by analyzing director, actors, genre, and trends.
+        </div>
+        <div class="about-image glass"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        
+        <!-- Brand -->
+        <div>
+            <h3>MovieVerse AI</h3>
+            <p>Predict movie success with the power of AI and data-driven insights.</p>
+        </div>
+
+        <!-- Developer -->
+        <div>
+            <h3>Developer</h3>
+            <p>Kunal Raju Ganeshkar</p>
+            <p>Full Stack & ML Developer</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h3>Contact</h3>
+            <p>Email: kunal@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: Maharashtra, India</p>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+            <h3>Follow</h3>
+            <p><i class="fab fa-github"></i> github.com/kunal</p>
+            <p><i class="fab fa-linkedin"></i> linkedin.com/in/kunal</p>
+            <p><i class="fab fa-instagram"></i> @kunal.dev</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 MovieVerse AI | Developed by Kunal Raju Ganeshkar</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
